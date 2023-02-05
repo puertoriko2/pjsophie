@@ -143,19 +143,19 @@ ul li {
 <!-- partial -->
 	</div>
   <script>
-var english = document.getElementById('en_click'),
-    french = document.getElementById('fr_click'),
-    en_txt = document.querySelectorAll('#en'),
+var french = document.getElementById('fr_click'),
+    english = document.getElementById('en_click'),
     fr_txt = document.querySelectorAll('#fr'),
-    nb_en = en_txt.length,
-    nb_fr = fr_txt.length;
+    en_txt = document.querySelectorAll('#en'),
+    nb_fr = fr_txt.length,
+    nb_en = en_txt.length;
 
 french.addEventListener('click', function() {
-    langue(english,french);
+    langue(french,english);
 }, false);
 
 english.addEventListener('click', function() {
-    langue(french,english);
+    langue(english,french);
 }, false);
 
 function langue(langueOn,langueOff){
@@ -163,13 +163,13 @@ function langue(langueOn,langueOff){
         langueOn.classList.toggle('current_lang');
         langueOff.classList.toggle('current_lang');
     }
-    if (langueOn.innerHTML == 'En'){
-        afficher(en_txt, nb_en);
-        cacher(fr_txt, nb_fr);
-    }
-    else if(langueOn.innerHTML == 'Fr'){
+    if(langueOn.innerHTML == 'Fr'){
         afficher(fr_txt, nb_fr);
         cacher(en_txt, nb_en);
+    }
+    else if(langueOn.innerHTML == 'En'){
+        afficher(en_txt, nb_en);
+        cacher(fr_txt, nb_fr);
     }
 }
 
@@ -184,7 +184,7 @@ function cacher(txt,nb){
     }
 }
 function init(){
-    langue(english,french);
+    langue(french,english);
 }
 init();
 </script>
