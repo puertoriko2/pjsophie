@@ -149,13 +149,13 @@ var french = document.getElementById('en_click'),
     en_txt = document.querySelectorAll('#fr'),
         nb_en = en_txt.length,
     nb_fr = fr_txt.length;
-
-english.addEventListener('click', function() {
-    langue(english,french);
-}, false);
 french.addEventListener('click', function() {
     langue(french,english);
 }, false);
+english.addEventListener('click', function() {
+    langue(english,french);
+}, false);
+
 
 
 
