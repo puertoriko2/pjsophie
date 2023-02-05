@@ -143,20 +143,19 @@ ul li {
 <!-- partial -->
 	</div>
   <script>
-var french = document.getElementById('en_click'),
-    english = document.getElementById('fr_click'),
+var english = document.getElementById('en_click'),
+    french = document.getElementById('fr_click'),
     en_txt = document.querySelectorAll('#en'),
     fr_txt = document.querySelectorAll('#fr'),
-    nb_en = en_txt.length;
-    nb_fr = fr_txt.length,
-    
+    nb_en = en_txt.length,
+    nb_fr = fr_txt.length;
 
 french.addEventListener('click', function() {
     langue(english,french);
 }, false);
 
 english.addEventListener('click', function() {
-    langue(english,french);
+    langue(french,english);
 }, false);
 
 function langue(langueOn,langueOff){
@@ -164,14 +163,13 @@ function langue(langueOn,langueOff){
         langueOn.classList.toggle('current_lang');
         langueOff.classList.toggle('current_lang');
     }
-    if(langueOn.innerHTML == 'Fr'){
-	    cacher(en_txt, nb_en);
-        afficher(fr_txt, nb_fr);
-        
-    }
-    else if(langueOn.innerHTML == 'En'){
+    if (langueOn.innerHTML == 'En'){
         afficher(en_txt, nb_en);
         cacher(fr_txt, nb_fr);
+    }
+    else if(langueOn.innerHTML == 'Fr'){
+        afficher(fr_txt, nb_fr);
+        cacher(en_txt, nb_en);
     }
 }
 
@@ -189,7 +187,6 @@ function init(){
     langue(english,french);
 }
 init();
-
 </script>
 
 </body>
