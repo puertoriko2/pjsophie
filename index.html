@@ -84,8 +84,8 @@ ul li {
 		<!-- partial:index.partial.html -->
 
 <ul class="social">
-	<li id="en_click" class="button_lang ">En</li>
-  <li id="fr_click" class="button_lang current_lang">Fr</li>
+	<li id="en_click" class="button_lang current_lang">En</li>
+  <li id="fr_click" class="button_lang ">Fr</li>
   
 			</ul>
 <!-- partial -->
@@ -143,10 +143,10 @@ ul li {
 <!-- partial -->
 	</div>
   <script>
-var french = document.getElementById('fr_click'),
-    english = document.getElementById('en_click'),
-    fr_txt = document.querySelectorAll('#fr'),
-    en_txt = document.querySelectorAll('#en'),
+var french = document.getElementById('en_click'),
+    english = document.getElementById('fr_click'),
+    fr_txt = document.querySelectorAll('#en'),
+    en_txt = document.querySelectorAll('#fr'),
     nb_fr = fr_txt.length,
     nb_en = en_txt.length;
 
