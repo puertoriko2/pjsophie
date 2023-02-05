@@ -84,8 +84,8 @@ ul li {
 		<!-- partial:index.partial.html -->
 
 <ul class="social">
-	<li id="en_click" class="button_lang current_lang">En</li>
-		  <li id="gr_click" class="button_lang">Ελ</li>
+	<li id="en_click" class="button_lang">En</li>
+		  <li id="gr_click" current_lang class="button_lang">Ελ</li>
   
 			</ul>
 <!-- partial -->
@@ -189,7 +189,7 @@ function cacher(txt,nb){
     }
 }
 function init(){
-    langue(greek,english);
+    langue(english,greek);
 }
 init();
 </script>
